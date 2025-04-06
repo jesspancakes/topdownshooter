@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfjplef25mfcx"]
+[gd_scene load_steps=4 format=3 uid="uid://cfjplef25mfcx"]
+
+[ext_resource type="PackedScene" uid="uid://cg66d4d5wthk5" path="res://scenes/box.tscn" id="1_62e7g"]
+[ext_resource type="PackedScene" uid="uid://d1vxgj23ur8ap" path="res://scenes/player.tscn" id="2_vdywc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_t58rw"]
 
@@ -10,3 +13,9 @@ position = Vector2(614, 481)
 scale = Vector2(5293.5, 2904.5)
 mesh = SubResource("QuadMesh_t58rw")
 metadata/_edit_lock_ = true
+
+[node name="Box" parent="." instance=ExtResource("1_62e7g")]
+position = Vector2(458, 297)
+
+[node name="Player" parent="." instance=ExtResource("2_vdywc")]
+position = Vector2(228, 232)
