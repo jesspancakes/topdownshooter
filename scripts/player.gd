@@ -1,9 +1,14 @@
 extends CharacterBody2D
 
+signal died
+
 var speed = 300
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
+	
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
 
 func _physics_process(delta: float) -> void:
 	var move_dir = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down"))
@@ -16,3 +21,9 @@ func _physics_process(delta: float) -> void:
 	
 	
 	move_and_slide()
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body is Enemy:
+		died.emit()
+		queue_free()

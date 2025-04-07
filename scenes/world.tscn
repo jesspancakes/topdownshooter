@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfjplef25mfcx"]
+[gd_scene load_steps=6 format=3 uid="uid://cfjplef25mfcx"]
 
 [ext_resource type="PackedScene" uid="uid://cg66d4d5wthk5" path="res://scenes/box.tscn" id="1_62e7g"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_o8evb"]
 [ext_resource type="PackedScene" uid="uid://d1vxgj23ur8ap" path="res://scenes/player.tscn" id="2_vdywc"]
+[ext_resource type="PackedScene" uid="uid://cx2esa8s3hee" path="res://scenes/enemy.tscn" id="3_at5gl"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_t58rw"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_o8evb")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.811765, 1, 1, 1)
@@ -19,3 +22,6 @@ position = Vector2(458, 297)
 
 [node name="Player" parent="." instance=ExtResource("2_vdywc")]
 position = Vector2(228, 232)
+
+[node name="Enemy" parent="." instance=ExtResource("3_at5gl")]
+position = Vector2(590, 164)
