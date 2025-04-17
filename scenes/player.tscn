@@ -39,4 +39,7 @@ shape = SubResource("CapsuleShape2D_o4714")
 
 [node name="CameraRemoteTransform" type="RemoteTransform2D" parent="."]
 
+[node name="Hand" type="Marker2D" parent="."]
+position = Vector2(11, 80)
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
