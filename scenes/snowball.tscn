@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlxtqi1jy4vat"]
+[gd_scene load_steps=4 format=3 uid="uid://dlxtqi1jy4vat"]
 
+[ext_resource type="Script" path="res://scripts/snowball.gd" id="1_ei30q"]
 [ext_resource type="Texture2D" uid="uid://8v548mnnwc32" path="res://assets/snowball2.png" id="1_ixfuw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pcurj"]
 radius = 14.0357
 
 [node name="Snowball" type="Area2D"]
+script = ExtResource("1_ei30q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.327778, 0.327778)
@@ -13,3 +15,9 @@ texture = ExtResource("1_ixfuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pcurj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-39, 0)
+scale = Vector2(0.6, 1)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
