@@ -25,3 +25,5 @@ position = Vector2(228, 232)
 
 [node name="Enemy" parent="." instance=ExtResource("3_at5gl")]
 position = Vector2(590, 164)
+
+[node name="MainCamera" type="Camera2D" parent="."]
