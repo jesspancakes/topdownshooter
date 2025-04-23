@@ -10,7 +10,6 @@ signal snowball_shot(snowball_scene, location)
 
 var speed = 300
 
-var snowball_scene = preload("res://scenes/snowball.tscn")
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -41,4 +40,3 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 
 
 func shoot():
-	snowball_shot.emit(snowball_scene, hand.global_position)

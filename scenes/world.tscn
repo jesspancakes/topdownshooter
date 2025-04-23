@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfjplef25mfcx"]
+[gd_scene load_steps=6 format=3 uid="uid://cfjplef25mfcx"]
 
 [ext_resource type="PackedScene" uid="uid://cg66d4d5wthk5" path="res://scenes/box.tscn" id="1_62e7g"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_o8evb"]
 [ext_resource type="PackedScene" uid="uid://d1vxgj23ur8ap" path="res://scenes/player.tscn" id="2_vdywc"]
 [ext_resource type="PackedScene" uid="uid://cx2esa8s3hee" path="res://scenes/enemy.tscn" id="3_at5gl"]
-[ext_resource type="PackedScene" uid="uid://dlxtqi1jy4vat" path="res://scenes/snowball.tscn" id="5_rds1i"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_t58rw"]
 
@@ -28,5 +27,3 @@ position = Vector2(228, 232)
 position = Vector2(590, 164)
 
 [node name="MainCamera" type="Camera2D" parent="."]
-
-[node name="Snowball" parent="." instance=ExtResource("5_rds1i")]

@@ -11,6 +11,3 @@ func on_player_died():
 	print("game over")
 	get_tree().create_timer(3).timeout.connect(get_tree().reload_current_scene)
 	
-func _on_player_snowball_shot(snowball_scene, location):
-	var snowball = snowball_scene.instantiate()
-	snowball.global_position = location

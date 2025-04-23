@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://y16sff748yh5"]
+
+[ext_resource type="Script" path="res://Player1.gd" id="1_38blg"]
+[ext_resource type="Texture2D" uid="uid://3bdmtoj7q61n" path="res://snowman.png" id="2_3tnan"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r34bx"]
+radius = 16.1245
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_38blg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_r34bx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3tnan")
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D/Node2D"]
+position = Vector2(20, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
