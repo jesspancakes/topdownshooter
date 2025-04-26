@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://y16sff748yh5"]
+[gd_scene load_steps=5 format=3 uid="uid://y16sff748yh5"]
 
 [ext_resource type="Script" path="res://Player1.gd" id="1_38blg"]
 [ext_resource type="Texture2D" uid="uid://blunyj7nvj0qw" path="res://snowman2.png" id="2_il5ht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r34bx"]
 radius = 26.0768
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfceu"]
+radius = 26.0
 
 [node name="Player" type="Node2D"]
 
@@ -19,8 +22,8 @@ shape = SubResource("CircleShape2D_r34bx")
 scale = Vector2(0.191304, 0.191304)
 texture = ExtResource("2_il5ht")
 
-[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
-position = Vector2(-10, 56)
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
-[node name="Marker2D" type="Marker2D" parent="CharacterBody2D/Node2D"]
-position = Vector2(19, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(-9, 1)
+shape = SubResource("CircleShape2D_tfceu")

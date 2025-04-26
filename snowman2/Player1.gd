@@ -1,25 +1,12 @@
 extends CharacterBody2D
 
-const bulletPath = preload("res://Bullet.tscn")
-
-var speed = 300
+var speed = 500
+var bullet_speed = 5000
+var bullet = preload("res://Bullet.tscn")
 
 func _ready():
 	pass
-	
 
-
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		shoot()
-		
-	$Node2D.look_at(get_global_mouse_position())
-	
-	look_at(get_global_mouse_position())
-	
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
-	
 func _physics_process(delta: float) -> void:
 	var move_dir = Vector2(Input.get_axis("ui_left", "ui_right"), Input.get_axis("ui_up", "ui_down"))
 	
@@ -29,17 +16,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.y = move_toward(velocity.y, 0, speed)
 	
-	
 	move_and_slide()
-
-
-
-
-func shoot():
-	var bullet = bulletPath.instantiate()
 	
-	get_parent().add_child(bullet)
-	bullet.position = $Node2D/Marker2D.global_position
+	look_at(get_global_mouse_position())
 	
-	bullet.velocity = get_global_mouse_position() - bullet.position
+	if Input.is_action_just_pressed("shoot"):
+		fire()
 	
+func fire():
+	var bullet_instantiate = bullet.instantiate()
+	bullet_instantiate.position = get_global_position()
+	bullet_instantiate.rotation_degrees = rotation_degrees
+	bullet_instantiate.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+	get_tree().get_root().call_deferred("add_child", bullet_instantiate)
