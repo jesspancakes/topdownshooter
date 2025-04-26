@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var speed = 500
-var bullet_speed = 5000
+var bullet_speed = 2000
 var bullet = preload("res://Bullet.tscn")
 
 func _ready():
@@ -29,3 +29,12 @@ func fire():
 	bullet_instantiate.rotation_degrees = rotation_degrees
 	bullet_instantiate.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instantiate)
+	
+	
+func _kill():
+	get_tree().reload_current_scene()
+
+
+func _on_area_2d_body_entered(body):
+	if "Enemy" in body.name:
+		_kill()
