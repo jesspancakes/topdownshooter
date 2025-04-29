@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 var motion = Vector2()
 
-var texture = preload("res://snowman2.png")
 
 func _ready():
 	pass
@@ -18,5 +17,4 @@ func _physics_process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if "Bullet" in body.name:
-		texture = texture 
 		print("hello")

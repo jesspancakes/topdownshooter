@@ -32,7 +32,7 @@ func fire():
 	
 	
 func _kill():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://game_over_screen.tscn")
 
 
 func _on_area_2d_body_entered(body):
