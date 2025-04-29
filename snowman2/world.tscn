@@ -15,13 +15,12 @@ script = ExtResource("1_jxlf4")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.8, 1, 1, 1)
-position = Vector2(511.5, 403)
-scale = Vector2(3055, 1798)
+position = Vector2(44, 146)
+scale = Vector2(4642.5, 3002.5)
 mesh = SubResource("QuadMesh_6r0oq")
-metadata/_edit_lock_ = true
 
 [node name="Wall" parent="." instance=ExtResource("1_lg3py")]
-position = Vector2(492, 281)
+position = Vector2(855, 628)
 
 [node name="Player" parent="." instance=ExtResource("2_xphvb")]
 position = Vector2(-122, -2)
