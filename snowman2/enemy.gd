@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 var motion = Vector2()
 
+var texture = preload("res://snowman2.png")
+
 func _ready():
 	pass
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	var Player = get_parent().get_node("Player")
 	
 	position += (Player.position - position)/50
@@ -16,4 +18,5 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	if "Bullet" in body.name:
-		queue_free()
+		texture = texture 
+		print("hello")

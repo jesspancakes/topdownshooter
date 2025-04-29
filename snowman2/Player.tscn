@@ -29,6 +29,8 @@ texture = ExtResource("2_il5ht")
 position = Vector2(-9, 1)
 shape = SubResource("CircleShape2D_tfceu")
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
 [node name="Enemy" parent="." instance=ExtResource("3_6gf6k")]
 position = Vector2(892, 395)
 
