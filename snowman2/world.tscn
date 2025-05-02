@@ -971,4 +971,4 @@ position = Vector2(0, -2856)
 position = Vector2(0, -2896)
 
 [node name="Player" parent="." instance=ExtResource("2_xphvb")]
-position = Vector2(-122, -2)
+position = Vector2(-24, -32)

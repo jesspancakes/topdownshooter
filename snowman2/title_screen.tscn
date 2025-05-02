@@ -21,12 +21,36 @@ mesh = SubResource("QuadMesh_eyibq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0.841356, 0.985036, 1)
-offset_left = 235.0
-offset_top = 134.0
-offset_right = 1035.0
-offset_bottom = 374.0
+offset_left = 240.0
+offset_top = 24.0
+offset_right = 904.0
+offset_bottom = 370.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("2_d6tyf")
 theme_override_font_sizes/normal_font_size = 200
-text = "SNOWBALL FIGHT"
+text = "SNOWBALL 
+   FIGHT"
+
+[node name="StartButton" type="Button" parent="."]
+modulate = Color(7.12335e-06, 0.65299, 0.860625, 1)
+layout_mode = 0
+offset_left = 288.0
+offset_top = 416.0
+offset_right = 472.0
+offset_bottom = 504.0
+text = "START"
+flat = true
+
+[node name="QuitButton" type="Button" parent="."]
+modulate = Color(7.12335e-06, 0.65299, 0.860625, 1)
+layout_mode = 0
+offset_left = 696.0
+offset_top = 424.0
+offset_right = 880.0
+offset_bottom = 512.0
+text = "QUIT"
+flat = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

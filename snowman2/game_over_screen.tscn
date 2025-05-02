@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://csfpiu46fcefv"]
+[gd_scene load_steps=4 format=3 uid="uid://csfpiu46fcefv"]
 
 [ext_resource type="Script" path="res://game_over_screen.gd" id="1_t24aj"]
+[ext_resource type="FontFile" uid="uid://cfmmua1c2d3ll" path="res://SNOWICE.ttf" id="2_pmobx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tpw7i"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -11,20 +14,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t24aj")
 
-[node name="Label" type="Label" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(585, 339)
+scale = Vector2(1251, 701.5)
+mesh = SubResource("QuadMesh_tpw7i")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(3.46541e-06, 0.852657, 0.984501, 1)
 layout_mode = 0
-offset_left = 428.0
-offset_top = 210.0
-offset_right = 646.0
-offset_bottom = 375.0
-text = "GAME OVER !!!!!!!"
+offset_left = 375.0
+offset_top = 26.0
+offset_right = 798.0
+offset_bottom = 368.0
+theme_override_fonts/normal_font = ExtResource("2_pmobx")
+theme_override_font_sizes/normal_font_size = 290
+text = "YOU LOSE"
 
 [node name="Button" type="Button" parent="."]
+modulate = Color(7.70092e-07, 0.952133, 0.953337, 1)
 layout_mode = 0
-offset_left = 434.0
-offset_top = 375.0
-offset_right = 679.0
-offset_bottom = 479.0
-text = "Try again?"
+offset_left = 446.0
+offset_top = 442.0
+offset_right = 680.0
+offset_bottom = 544.0
+text = "TRY AGAIN?"
+flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
