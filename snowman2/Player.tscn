@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://y16sff748yh5"]
+[gd_scene load_steps=5 format=3 uid="uid://y16sff748yh5"]
 
 [ext_resource type="Script" path="res://Player1.gd" id="1_38blg"]
 [ext_resource type="Texture2D" uid="uid://blunyj7nvj0qw" path="res://snowman2.png" id="2_il5ht"]
-[ext_resource type="PackedScene" uid="uid://bxamo37wsnbm7" path="res://enemy.tscn" id="3_6gf6k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r34bx"]
 radius = 26.0
@@ -30,26 +29,5 @@ position = Vector2(-9, 1)
 shape = SubResource("CircleShape2D_tfceu")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-
-[node name="Enemy" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(892, 395)
-
-[node name="Enemy2" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(-1580, -41)
-
-[node name="Enemy3" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(-569, 1336)
-
-[node name="Enemy4" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(1194, -952)
-
-[node name="Enemy5" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(1214, 1055)
-
-[node name="Enemy6" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(-803, -688)
-
-[node name="Enemy7" parent="." instance=ExtResource("3_6gf6k")]
-position = Vector2(-1138, 943)
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
