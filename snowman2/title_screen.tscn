@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bh3xu4kdl3346"]
+[gd_scene load_steps=4 format=3 uid="uid://bh3xu4kdl3346"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_023bl"]
+[ext_resource type="FontFile" uid="uid://cfmmua1c2d3ll" path="res://SNOWICE.ttf" id="2_d6tyf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_eyibq"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -11,13 +14,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_023bl")
 
-[node name="StartButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 267.0
-offset_right = 754.0
-offset_bottom = 357.0
-text = "start
-"
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(578.895, 331.949)
+scale = Vector2(-1176.67, 678.235)
+mesh = SubResource("QuadMesh_eyibq")
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0.841356, 0.985036, 1)
+offset_left = 235.0
+offset_top = 134.0
+offset_right = 1035.0
+offset_bottom = 374.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_d6tyf")
+theme_override_font_sizes/normal_font_size = 200
+text = "SNOWBALL FIGHT"

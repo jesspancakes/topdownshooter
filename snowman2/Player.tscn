@@ -34,4 +34,22 @@ shape = SubResource("CircleShape2D_tfceu")
 [node name="Enemy" parent="." instance=ExtResource("3_6gf6k")]
 position = Vector2(892, 395)
 
+[node name="Enemy2" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(-1580, -41)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(-569, 1336)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(1194, -952)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(1214, 1055)
+
+[node name="Enemy6" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(-803, -688)
+
+[node name="Enemy7" parent="." instance=ExtResource("3_6gf6k")]
+position = Vector2(-1138, 943)
+
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
