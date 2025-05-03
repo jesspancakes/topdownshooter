@@ -21,6 +21,7 @@ mesh = SubResource("QuadMesh_eyibq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0.841356, 0.985036, 1)
+layout_mode = 0
 offset_left = 240.0
 offset_top = 24.0
 offset_right = 904.0

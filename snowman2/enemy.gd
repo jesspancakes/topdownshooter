@@ -20,3 +20,4 @@ func _on_area_2d_body_entered(body):
 		print("hello")
 		$Sprite2D.texture = preload("res://snowman2.png")
 		set_physics_process(false)
+		$CPUParticles2D.emitting = true
