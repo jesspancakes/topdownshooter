@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://csfpiu46fcefv"]
+[gd_scene load_steps=5 format=3 uid="uid://csfpiu46fcefv"]
 
 [ext_resource type="Script" path="res://game_over_screen.gd" id="1_t24aj"]
 [ext_resource type="FontFile" uid="uid://cfmmua1c2d3ll" path="res://SNOWICE.ttf" id="2_pmobx"]
+[ext_resource type="AudioStream" uid="uid://b24efaxvwybpn" path="res://133283__leszek_szary__game-over.wav" id="3_dm7mc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_tpw7i"]
 
@@ -39,5 +40,9 @@ offset_right = 680.0
 offset_bottom = 544.0
 text = "TRY AGAIN?"
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dm7mc")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
