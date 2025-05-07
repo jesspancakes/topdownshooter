@@ -39,7 +39,10 @@ func die():
 	$Sprite2D.texture = preload("res://snowman2.png")
 	$CPUParticles2D.emitting = true
 	$AudioStreamPlayer2D.play()
-	$Area2D/CollisionShape2D.set_deferred("disabled", true)
+	$Area2D/CollisionShape2D.set_deferred("disabled", true) 
+	ScoreManager.add_kill()
+
+
 
 func _on_timer_timeout():
 	entered = true

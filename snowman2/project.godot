@@ -19,6 +19,11 @@ run/layer_3=""
 run/layer_2=""
 run/layer_1=""
 
+[autoload]
+
+GlobalCanvasLayer="*res://canvas_layer.gd"
+ScoreManager="*res://score_manager.gd"
+
 [input]
 
 ui_left={
