@@ -40,6 +40,7 @@ offset_left = 288.0
 offset_top = 416.0
 offset_right = 472.0
 offset_bottom = 504.0
+theme_override_font_sizes/font_size = 50
 text = "START"
 flat = true
 
@@ -50,6 +51,7 @@ offset_left = 696.0
 offset_top = 424.0
 offset_right = 880.0
 offset_bottom = 512.0
+theme_override_font_sizes/font_size = 50
 text = "QUIT"
 flat = true
 
