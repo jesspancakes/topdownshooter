@@ -12,10 +12,9 @@ material = SubResource("StandardMaterial3D_o2ijb")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.8, 1, 1, 1)
-position = Vector2(44, 146)
-scale = Vector2(4642.5, 3002.5)
+position = Vector2(32.0001, 252)
+scale = Vector2(6992, 4584)
 mesh = SubResource("QuadMesh_6r0oq")
-metadata/_edit_lock_ = true
 
 [node name="InsideWall" parent="." instance=ExtResource("1_lg3py")]
 position = Vector2(856, 632)
