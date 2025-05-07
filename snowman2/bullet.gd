@@ -9,6 +9,9 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body: Node) -> void:
-	if "Enemy" in body.name:
-		body.queue_free()
+	if body.name == "OutsideWalls":
+		queue_free()
+
+
+func _on_timer_timeout() -> void:
 	queue_free()

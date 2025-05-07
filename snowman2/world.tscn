@@ -164,6 +164,8 @@ collision_mask = 3
 
 [node name="OutsideWalls" parent="." instance=ExtResource("1_lg3py")]
 position = Vector2(-2256, 1624)
+collision_layer = 7
+collision_mask = 7
 
 [node name="Wall3" parent="OutsideWalls" instance=ExtResource("1_lg3py")]
 position = Vector2(56, 0)

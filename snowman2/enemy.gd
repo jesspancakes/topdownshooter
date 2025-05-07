@@ -18,6 +18,4 @@ func _physics_process(_delta):
 func _on_area_2d_body_entered(body):
 	if "Bullet" in body.name:
 		print("hello")
-		$CPUParticles2D.emitting = true
-		$AudioStreamPlayer2D.play()
 		queue_free()
