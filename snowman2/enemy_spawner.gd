@@ -13,7 +13,7 @@ func _ready():
 			spawn_points.append(i)
 
 func _on_timer_timeout() -> void:
-	var enemies = get_tree().get_nodes_in_group("enemies")
+	var enemies = get_tree().get_nodes_in_group("_enemies")
 	var spawn = spawn_points[randi() % spawn_points.size()]
 	var enemy = enemy_scene.instantiate()
 	enemy.position = spawn.position
