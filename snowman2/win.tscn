@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://fymt5u0sn1o8"]
+
+[ext_resource type="FontFile" uid="uid://cfmmua1c2d3ll" path="res://SNOWICE.ttf" id="1_nby5y"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_u5xi1"]
+
+[node name="Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(580.25, 338.25)
+scale = Vector2(1161.5, 677.5)
+mesh = SubResource("QuadMesh_u5xi1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.141176, 1, 1, 1)
+layout_mode = 0
+offset_left = 258.0
+offset_top = 1.0
+offset_right = 940.0
+offset_bottom = 520.0
+theme_override_fonts/normal_font = ExtResource("1_nby5y")
+theme_override_font_sizes/normal_font_size = 500
+text = "YOU
+WIN"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color(0.141176, 1, 1, 1)
+layout_mode = 0
+offset_left = 175.0
+offset_top = 548.0
+offset_right = 1059.0
+offset_bottom = 638.0
+theme_override_fonts/normal_font = ExtResource("1_nby5y")
+theme_override_font_sizes/normal_font_size = 100
+text = "You made 10 new friends"
