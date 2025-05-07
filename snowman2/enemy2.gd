@@ -38,6 +38,7 @@ func _physics_process(_delta):
 		
 
 func die():
+	alive = false
 	print("hello")
 	$Sprite2D.texture = preload("res://snowman2.png")
 	set_physics_process(false)

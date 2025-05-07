@@ -18,7 +18,6 @@ func _physics_process(_delta):
 func _on_area_2d_body_entered(body):
 	if "Bullet" in body.name:
 		print("hello")
-		$Sprite2D.texture = preload("res://snowman2.png")
-		set_physics_process(false)
 		$CPUParticles2D.emitting = true
 		$AudioStreamPlayer2D.play()
+		queue_free()

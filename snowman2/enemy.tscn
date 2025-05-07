@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bxamo37wsnbm7"]
 
-[ext_resource type="Script" path="res://enemy2.gd" id="1_5iitj"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_pqyoi"]
 [ext_resource type="Texture2D" uid="uid://nhac4aysysxx" path="res://enemy.png" id="2_f5k4y"]
 [ext_resource type="AudioStream" uid="uid://bcq8k0o7rdwb" path="res://snowballhit.wav" id="3_jx0pn"]
 
@@ -14,7 +14,7 @@ height = 90.0
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 7
 collision_mask = 7
-script = ExtResource("1_5iitj")
+script = ExtResource("1_pqyoi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7.5, 1.5)
