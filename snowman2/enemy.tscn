@@ -1,20 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxamo37wsnbm7"]
+[gd_scene load_steps=5 format=3 uid="uid://bxamo37wsnbm7"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_pqyoi"]
+[ext_resource type="Script" path="res://enemy2.gd" id="1_5iitj"]
 [ext_resource type="Texture2D" uid="uid://nhac4aysysxx" path="res://enemy.png" id="2_f5k4y"]
-[ext_resource type="AudioStream" uid="uid://bcq8k0o7rdwb" path="res://snowballhit.wav" id="3_jx0pn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8o3e"]
 size = Vector2(31, 71)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tff1l"]
-radius = 27.0
-height = 90.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obhvk"]
+size = Vector2(38, 73)
 
 [node name="Enemy" type="CharacterBody2D"]
-collision_layer = 7
-collision_mask = 7
-script = ExtResource("1_pqyoi")
+collision_layer = 4
+script = ExtResource("1_5iitj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7.5, 1.5)
@@ -25,27 +22,16 @@ position = Vector2(-10, 1)
 scale = Vector2(0.0772694, 0.0772694)
 texture = ExtResource("2_f5k4y")
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 6
-collision_mask = 6
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-7, 1)
-shape = SubResource("CapsuleShape2D_tff1l")
+position = Vector2(-6, 1.5)
+shape = SubResource("RectangleShape2D_obhvk")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-emitting = false
-one_shot = true
-explosiveness = 1.0
-emission_shape = 1
-emission_sphere_radius = 0.01
-spread = 180.0
-gravity = Vector2(0, 0)
-initial_velocity_min = 63.69
-initial_velocity_max = 121.02
-scale_amount_max = 7.37
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_jx0pn")
-
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://huwf3dy0hqh"]
+
+[ext_resource type="Script" path="res://player_2.gd" id="1_2kmru"]
+[ext_resource type="Texture2D" uid="uid://blunyj7nvj0qw" path="res://snowman2.png" id="2_eaf7h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3db1i"]
+radius = 32.0156
+
+[node name="Player2" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_2kmru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 2)
+shape = SubResource("CircleShape2D_3db1i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.999998)
+scale = Vector2(0.21841, 0.21841)
+texture = ExtResource("2_eaf7h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ShotTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
