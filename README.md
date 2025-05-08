@@ -16,9 +16,10 @@ Once an NPC is hit with a snowball, they turn into a snowman and are no longer h
 ASSETS/REFERENCES:
 Code both self written and modified from: https://youtu.be/XwQhWTFRdHk?si=KovAiUcps6XxKdOr
 Also some from connor my goat
-Music:
-Game over sound:
-Snowball sound: 
+
+Music: https://freesound.org/people/mikewhite12/sounds/653157/
+Game over sound: https://freesound.org/people/Leszek_Szary/sounds/133283/
+Snowball sound: https://freesound.org/people/Julien_Matthey/sounds/167080/
 
 All art done by ME in PhotoShop
 
