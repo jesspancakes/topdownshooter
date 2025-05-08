@@ -28,3 +28,5 @@ Overcoming making like 3 different projects just because the bullets never worke
 
 WHAT I LEARNED:
 I learned a lot about using signals to connect different actions together. 
+
+GDD: https://tudublin-my.sharepoint.com/:w:/r/personal/c24453362_mytudublin_ie/_layouts/15/Doc.aspx?sourcedoc=%7BB550785C-8529-437B-A38C-2432F2B73C25%7D&file=ShooterGDD.docx&action=default&mobileredirect=true&DefaultItemOpen=1&ct=1746693406194&wdOrigin=OFFICECOM-WEB.MAIN.REC&cid=9397c18c-f22f-438d-a32e-7b19db6d732e&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=95ef1d4c-9225-41bf-b884-d20df8aec849
